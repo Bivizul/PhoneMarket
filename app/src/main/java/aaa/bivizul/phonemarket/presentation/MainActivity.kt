@@ -1,5 +1,6 @@
-package aaa.bivizul.phonemarket
+package aaa.bivizul.phonemarket.presentation
 
+import aaa.bivizul.phonemarket.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
