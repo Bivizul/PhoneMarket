@@ -1,5 +1,6 @@
 package aaa.bivizul.phonemarket.data.network
 
+import aaa.bivizul.phonemarket.domain.di.Stage
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -23,16 +24,16 @@ class NetworkApi {
         .addInterceptor(logging())
         .build()
 
-
     @Provides
     @Singleton
-    fun provideRetrofit(baseUrl: String): MarketApiService =
+//    @Stage
+    fun provideRetrofit(baseUrl: String): MarketService =
         Retrofit.Builder()
             .baseUrl(baseUrl)
             .client(okHttpClient())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(MarketApiService::class.java)
+            .create(MarketService::class.java)
 
     companion object {
         const val BASE_URL = "https://run.mocky.io/"

@@ -5,9 +5,8 @@ import aaa.bivizul.phonemarket.domain.model.Market
 import aaa.bivizul.phonemarket.domain.model.Phone
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Query
 
-interface MarketApiService {
+interface MarketService {
 
     @GET("v3/654bd15e-b121-49ba-a588-960956b15175")
     suspend fun getMarket(): Response<Market>
