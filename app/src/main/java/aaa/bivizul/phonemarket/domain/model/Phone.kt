@@ -2,10 +2,11 @@ package aaa.bivizul.phonemarket.domain.model
 
 
 import androidx.annotation.Keep
+import com.google.gson.annotations.SerializedName
 
 @Keep
 data class Phone(
-    val CPU: String,
+    @SerializedName("CPU") val cpu: String,
     val camera: String,
     val capacity: List<String>,
     val color: List<String>,

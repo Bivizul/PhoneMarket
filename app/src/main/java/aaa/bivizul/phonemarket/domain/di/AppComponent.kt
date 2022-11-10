@@ -1,6 +1,7 @@
 package aaa.bivizul.phonemarket.domain.di
 
 import aaa.bivizul.phonemarket.presentation.MainActivity
+import aaa.bivizul.phonemarket.presentation.PhoneFragment
 import dagger.Component
 import javax.inject.Qualifier
 import javax.inject.Singleton
@@ -10,7 +11,7 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun inject(mainActivity: MainActivity)
-//    fun inject(phoneRepository: PhoneRepository)
+    fun inject(phoneFragment: PhoneFragment)
 
 }
 
